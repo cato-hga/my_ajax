@@ -1,0 +1,6 @@
+$("#myupdate_ <%= @post.id %>").modal('hide');
+
+$('#mypost_<%= @post.id %>').fadeOut(500, function(){
+	$(this).remove();
+	$("#container_posts").prepend('<%= j render @post %>');
+});
